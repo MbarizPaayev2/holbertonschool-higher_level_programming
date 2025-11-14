@@ -1,5 +1,4 @@
-#!/usr/bin/python3
-#this is script 
+#!/usr/bin/python3 
 word = "Holberton"
 word_first_3 = word[0:3]
 word_last_2 = word[1:2]

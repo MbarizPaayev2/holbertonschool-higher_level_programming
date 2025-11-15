@@ -7,9 +7,10 @@ def islower(c):
         return True
     return False
 
-if __name__ == "__main__"
-char = input()
-if islower(char):
-    print("{} => lower".format(char))
-else:
-    print("{} => upper".format(char))
+
+if __name__ == "__main__":
+    char = input()
+    if islower(char):
+        print("{} => lower".format(char))
+    else:
+        print("{} => upper".format(char))

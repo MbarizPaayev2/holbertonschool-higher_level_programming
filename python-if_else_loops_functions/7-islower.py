@@ -7,7 +7,7 @@ def islower(c):
         return True
     return False
 
-
+if __name__ == "__main__"
 char = input()
 if islower(char):
     print("{} is lower".format(char))

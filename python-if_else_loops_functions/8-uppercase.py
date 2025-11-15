@@ -7,4 +7,4 @@ def uppercase(s):
 
 if __name__ == "__main__":
     s = input()
-    print(uppercase(s))
+    print("{}".format(uppercase(s)))

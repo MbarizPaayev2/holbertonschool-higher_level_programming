@@ -7,6 +7,7 @@ def uppercase(s):
         if 97 <= num <= 122:
             i = chr(num - 32)
         print("{}".format(i), end="")
+    print()
 
 
 if __name__ == "__main__":

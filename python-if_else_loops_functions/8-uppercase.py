@@ -4,7 +4,7 @@ def uppercase(s):
     res = ""
     for i in s:
         num = ord(i)
-        if 97 < = num < = 122:
+        if 97 <= num <= 122:
             res = res + chr(num - 32)
         else:
             res = res + i

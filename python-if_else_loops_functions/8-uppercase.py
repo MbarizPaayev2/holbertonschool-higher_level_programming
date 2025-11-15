@@ -11,6 +11,6 @@ def uppercase(s):
     return res
 
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     s = input()
 print("{}".format(uppercase(s)))

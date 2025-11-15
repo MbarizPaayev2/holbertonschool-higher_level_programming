@@ -10,6 +10,6 @@ def islower(c):
 if __name__ == "__main__"
 char = input()
 if islower(char):
-    print("{} is lower".format(char))
+    print("{} => lower".format(char))
 else:
-    print("{} is upper".format(char))
+    print("{} => upper".format(char))

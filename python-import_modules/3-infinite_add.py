@@ -8,3 +8,6 @@ else:
     for i in a:
         res = res + int(i)
     print(res)
+
+if __name__ == "__main__":
+    main()

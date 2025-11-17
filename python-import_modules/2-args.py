@@ -9,3 +9,6 @@ else:
     print(len(a), "arguments:")
 for k,i in enumerate(a, 1):
     print(f"{k}: {i}")
+
+if __name__ == "__main__":
+    main()

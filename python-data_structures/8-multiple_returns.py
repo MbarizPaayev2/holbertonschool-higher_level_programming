@@ -3,5 +3,5 @@ def multiple_returns(sentence):
     li = len(sentence)
     f = sentence[0]
     if f == "":
-        return None
+        f = None
     return li, f

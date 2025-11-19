@@ -4,4 +4,4 @@ def multiple_returns(sentence):
     f = sentence[0]
     if f == "":
         f = None
-return li, f
+    return li, f

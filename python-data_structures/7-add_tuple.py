@@ -5,10 +5,10 @@ def add_tuple(tuple_a=(), tuple_b=()):
     return (new[0] + new1[0], new[1] + new1[1])
     
 def str(t=()):
-    if len(tuple_a) == 2:
+    if len(t) == 2:
         n = t[0],t[1]
-    elif len(tuple_a) < 2:
+    elif len(t) < 2:
         n = t[0],0
-    elif len(tuple_a) > 2:
+    elif len(t) > 2:
         n = t[0],t[1]
     return n;     

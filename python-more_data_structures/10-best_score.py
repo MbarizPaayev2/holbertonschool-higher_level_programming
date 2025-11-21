@@ -1,4 +1,11 @@
 #!/usr/bin/python3
-def update_dictionary(a_dictionary, key, value):
-    a_dictionary[key] = value
-    return a_dictionary
+def best_score(a_dictionary):
+    max = a_dictionary[0]
+    for key in a_dictionary:
+        if a_dictionary[key] > max:
+            max = a_dictionary[key]
+        
+    if max == a_dictionary[0]:
+        return None
+    else:
+        return max

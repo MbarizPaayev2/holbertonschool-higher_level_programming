@@ -1,23 +1,23 @@
 #!/usr/bin/python3
-"""this is document"""
+"""Rectangle class"""
 
 
 class Rectangle:
-    """this is document for"""
+    """rectangle class"""
 
     def __init__(self, width=0, height=0):
-        """this is document for"""
-        self.__width = width
-        self.__height = height
+        """Initialize Rectangle """
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
-        """this is document for """
+        """Getter"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """if is not documnet"""
+        """Setter"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -26,26 +26,24 @@ class Rectangle:
 
     @property
     def height(self):
-        """return value"""
+        """Getter"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """return height """
+        """Setter"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-    @staticmethod
     def area(self):
-        """return height """
+        """return area"""
         return self.__width * self.__height
-    @property
+
     def perimeter(self):
-        """return height """
-          if self.__height == 0 or self.__width == 0:
+        """return perimeter """
+        if self.__width == 0 or self.__height == 0:
             return 0
-         """return height """
-         return 2*(self.__width + self.__height)
+        return 2 * (self.__width + self.__height)

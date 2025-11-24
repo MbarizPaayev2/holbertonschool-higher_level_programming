@@ -2,7 +2,6 @@
  """
  this is documentation
  """
-
 class Rectangle:
     pass
-return __dict__
+return (Rectangle.__dict__)

@@ -5,6 +5,3 @@
 class Rectangle:
     """This is documentation for class"""
     pass
-
-
-return (Rectangle.__dict__)

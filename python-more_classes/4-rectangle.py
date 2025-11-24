@@ -1,5 +1,4 @@
 #!/usr/bin/python
-#!/usr/bin/python3
 """Rectangle class"""
 
 
@@ -48,12 +47,13 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__width + self.__height)
+
     def __str__(self):
         """return str"""
         if self.__width == 0 or self.__height == 0:
             return ""
-        l = "#" * self.__width
-        return "\n".join([l] * self.__height)
+        string = "#" * self.__width
+        return "\n".join([string] * self.__height)
 
     def __repr__(self):
         return (f"Rectangle({self.__width}, {self.__height})")

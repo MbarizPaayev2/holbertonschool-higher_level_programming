@@ -1,4 +1,3 @@
-#!/usr/bin/pyton3
 #!/usr/bin/python3
 """Rectangle class"""
 
@@ -54,5 +53,5 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return str
         for _ in range(self.__height):
-            str = "#" * self.__width
+            str = print("#" * self.__width)
         return str

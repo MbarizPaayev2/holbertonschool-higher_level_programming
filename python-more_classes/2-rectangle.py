@@ -7,8 +7,8 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """this is document for"""
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height
 
     @property
     def width(self):
@@ -37,6 +37,12 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-    @area
+
+    @staticmethod
     def area(self):
-        return self.__height
+        """return height """
+        return self.__width * self.__height
+    @property
+    def perimeter(self):
+        """return height """
+        return 2*(self.__width + self.__height)

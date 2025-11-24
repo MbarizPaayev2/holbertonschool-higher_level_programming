@@ -56,4 +56,4 @@ class Rectangle:
         return "\n".join([l] * self.__height)
 
     def __repr__(self):
-        return "Rectangle({self.__width}, {self.__height})"
+        return (f"Rectangle({self.__width}, {self.__height})")

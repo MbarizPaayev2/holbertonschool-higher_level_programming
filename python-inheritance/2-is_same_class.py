@@ -4,7 +4,4 @@
 
 def is_same_class(obj, a_class):
     """this is also"""
-    if isinstance(obj, type(a_class)):
-        return True
-    else:
-        return False
+    return type(obj) in a_class

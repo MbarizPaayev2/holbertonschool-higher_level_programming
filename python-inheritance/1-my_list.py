@@ -1,12 +1,13 @@
 #!/usr/bin/python3
-"""this is document """ 
+"""this is document"""
+
 
 class MyList(list):
-    """this is document"""
-    def __init__ (self, list = []):
-        self.list = list
- """this is doucment"""
-
+    """this is document""" 
+             list = []
+        def __init__ (self, list = []):
+                self.list = list
     def print_sorted(self):
-        self.sort()
-        print(self)
+        """Prints the list sorted"""
+        print(sorted(self))
+

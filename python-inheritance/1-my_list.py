@@ -3,7 +3,6 @@
 
 class MyList(list):
     """this is document"""
-        list = []
         def __init__ (self, list = []):
                 self.list = list
  """this is doucment"""

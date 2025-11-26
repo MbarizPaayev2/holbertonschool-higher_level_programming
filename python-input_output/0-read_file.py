@@ -4,6 +4,6 @@
 
 def read_file(filename=""):
     """this is class docstring"""
-    with open(filename, "r") as f:
+    with open(filename, "r", encoding="utf-8") as f:
         cont = f.read()
         return cont

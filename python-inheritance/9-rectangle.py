@@ -16,4 +16,4 @@ class Rectangle(BaseGeometry):
 
     def area(self):
         """this is document"""
-        return str(elf.__height * self.__width)
+        return str(self.__height * self.__width)

@@ -3,5 +3,4 @@
 def read_file(filename=""):
     """this is class docstring"""
     with open(filename, "r") as f:
-        cont = f.read()
-        return cont
+        print(f.read())

@@ -6,4 +6,4 @@ import json
 def save_to_json_file(my_obj, filename):
     """this is also docstr"""
     with open(filename, "w", encoding="utf-8") as json_file:
-        return json.dump(my_obj, json_file, indent=4)
+        return json.dump(my_obj, json_file)

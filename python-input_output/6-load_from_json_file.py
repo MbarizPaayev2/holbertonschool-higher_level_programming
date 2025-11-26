@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """this is docstring"""
-import json 
+import json
 
 
 def load_from_json_file(filename):

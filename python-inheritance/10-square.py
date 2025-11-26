@@ -1,0 +1,13 @@
+#!/usr/bin/python3
+"""this is document"""
+Rectangle = __import__("9-rectangle").Rectangle
+
+
+class Square(Rectangle):
+    """this is document"""
+    def __init__(self, size):
+        """this is document"""
+        self.integer_validator("size", size)
+        self.area(size)
+
+        self.__size = size

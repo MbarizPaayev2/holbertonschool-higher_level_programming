@@ -4,5 +4,5 @@
 
 def write_file(filename="", text=""):
     """this is document"""
-    with open(filename, "r", encoding="utf-8") as f:
+    with open(filename, text, "r", encoding="utf-8") as f:
         return f.count()

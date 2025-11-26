@@ -4,7 +4,7 @@ BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 """this is doccumnet"""
 class Rectangle(BaseGeometry):
-
+"""this is document"""
     def __init__(self, width, height):
         """this is document"""
         self.integer_validator("width", width)

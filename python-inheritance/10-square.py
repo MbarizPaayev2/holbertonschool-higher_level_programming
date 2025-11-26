@@ -9,5 +9,5 @@ class Square(Rectangle):
         """this is document"""
         self.integer_validator("size", size)
         self.area()
-
+        super().__init__(size, size)
         self.__size = size

@@ -2,7 +2,7 @@
 """this is document"""
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-
+"""this is doccumnet"""
 class Rectangle(BaseGeometry):
 
     def __init__(self, width, height):

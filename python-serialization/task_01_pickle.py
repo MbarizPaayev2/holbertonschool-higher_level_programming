@@ -18,5 +18,5 @@ class CustomObject:
     @classmethod
     def deserialize(cls, filename):
         with open(filename, "rb") as f:
-            load = pickle.load(f)
+            load = pickle.load(self, f)
             return load 

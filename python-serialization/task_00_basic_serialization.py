@@ -7,5 +7,6 @@ def serialize_and_save_to_file(data, filename):
     pass
 
 def load_and_deserialize(filename):
-    json.load(filename)
+    with open(filename, "w", encoding = "utf-8") as f:
+        json.load(filename)
     pass

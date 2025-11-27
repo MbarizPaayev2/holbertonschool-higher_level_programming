@@ -6,6 +6,7 @@ class CustomObject:
         self.name = name
         self.age = age
         self.is_student = is_student
+
     def display(self):
         print("Name:", self.name)
         print("Age:", self.age)
@@ -18,5 +19,5 @@ class CustomObject:
     @classmethod
     def deserialize(cls, filename):
         with open(filename, "rb") as f:
-            load = pickle.load(self, f)
+            load = pickle.load(cls, f)
             return load 

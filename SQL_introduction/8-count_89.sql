@@ -1,3 +1,3 @@
 -- THIS IS COMMENT 
 
-select id from first_table;
+SELECT id FROM first_table;

@@ -1,2 +1,2 @@
 -- this is comment 
-SELECT score, name FROM second_table ORDER BY ASC;
+SELECT score, name FROM second_table ORDER BY score ASC;

@@ -1,2 +1,2 @@
 ---this is comment---   
-SHOW DATABASE;
+SHOW DATABASES;

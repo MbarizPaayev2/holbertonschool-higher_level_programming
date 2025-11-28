@@ -1,0 +1,3 @@
+-- THİS İS COMMENT 
+
+SELECT * FROM 

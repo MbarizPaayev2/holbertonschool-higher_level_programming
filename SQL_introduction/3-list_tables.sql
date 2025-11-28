@@ -1,3 +1,3 @@
 -- THİS İS COMMENT 
 
-SELECT * FROM 
+Show tables;

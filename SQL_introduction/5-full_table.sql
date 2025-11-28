@@ -1,3 +1,2 @@
 -- THIS IS COMMENT 
-USE hbtn_0c_0;
-SELECT COLUMNS FROM first_table;
+SELECT * FROM first_table;

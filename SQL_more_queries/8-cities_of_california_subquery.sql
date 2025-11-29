@@ -6,5 +6,5 @@ The states table contains only one record where name = California (but the id ca
 Results must be sorted in ascending order by cities.id
 You are not allowed to use the JOIN keyword
 The database name will be passed as an argument of the mysql command
-*/
-SELECT cities FROM hbtn_0d_usa WHERE name = California ORDER BY id DESC;
+*/  
+SELECT cities FROM hbtn_0d_usa WHERE name = California ORDER BY cities.id DESC;

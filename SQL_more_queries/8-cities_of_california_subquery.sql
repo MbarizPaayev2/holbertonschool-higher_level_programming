@@ -1,9 +1,9 @@
--- THIS IS CODE 
-SELECT id, name 
-FROM cities 
-WHERE state.id IN( 
-SELECT id 
-FROM states 
-WHERE name = 'California'
+-- THIS IS COMMNETT 
+SELECT id, name
+FROM cities
+WHERE state_id IN (
+    SELECT id
+    FROM states
+    WHERE name = 'California'
 )
 ORDER BY id ASC;

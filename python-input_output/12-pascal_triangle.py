@@ -1,18 +1,15 @@
 #!/usr/bin/python3
 """
-This module provides a function to generate Pascal's triangle.
-
-It contains a single function `pascal_triangle(n)` that returns a list of
-lists representing Pascal's triangle of size n.
+this is docstr
 """
 
 
 def pascal_triangle(n):
-    """Return a list of lists representing Pascal's triangle of size n."""
+    """docstr"""
     if n <= 0:
         return []
 
-    triangle = [[1]]  # first row
+    triangle = [[1]]
 
     for i in range(1, n):
         prev = triangle[-1]

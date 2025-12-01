@@ -5,6 +5,6 @@ import sys
 if __name__ == "__main__":
     """this is cp,,emt"""
     url = sys.argv[1]
-    with urllib.request.urlopen(url) as r:
+    with urllib.requests.urlopen(url) as r:
         read = r.getheader("X-Request-Id")
         print(read)

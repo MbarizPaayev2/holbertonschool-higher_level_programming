@@ -6,4 +6,3 @@ if __name__ == "__main__":
     with urllib.request.urlopen(url) as r:
         read = r.getheader("X-Request-Id")
         print(re)
-

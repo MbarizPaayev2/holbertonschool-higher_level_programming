@@ -1,8 +1,10 @@
 #!/usr/bin/python3
+"""This script"""
 import urllib
 import sys
 if __name__ == "__main__":
-    url = sys.argv[i]
+    """this is cp,,emt"""
+    url = sys.argv[1]
     with urllib.request.urlopen(url) as r:
         read = r.getheader("X-Request-Id")
-        print(re)
+        print(read)

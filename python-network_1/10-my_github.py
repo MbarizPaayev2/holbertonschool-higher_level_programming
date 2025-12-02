@@ -9,4 +9,7 @@ if __name__ == "__main__":
     password = sys.argv[2]
     url = "https://api.github.com/user"
     response = requests.get(url, auth=(username, password))
-    print(response.get("id"))
+    if response.status_code == 200:
+        print(response.get("id"))
+    else:
+        print(None)

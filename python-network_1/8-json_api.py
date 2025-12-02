@@ -1,0 +1,18 @@
+#!/usr/bin/python3
+"""This is docstr"""
+
+import sys
+import requests
+if __name__ == "__main__":
+    if len(sys.argv) > 1:
+        q = sys.argv[1]
+    else:
+        response = requests.post(url, data={"q": q})
+    try:
+        data = response.json()
+        if data == {}:
+            print("No result")
+        else:
+            print("[{}] {}".format(data.get("id"), data.get("name")))
+    except Exception:
+        print("Not a valid JSON")

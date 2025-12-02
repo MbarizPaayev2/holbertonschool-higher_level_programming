@@ -7,7 +7,8 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         q = sys.argv[1]
     else:
-        response = requests.post(url, data={"q": q})
+        q = ""
+    response = requests.post(url, data={"q": q})
     try:
         data = response.json()
         if data == {}:

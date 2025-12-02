@@ -10,7 +10,7 @@ if __name__ == "__main__":
     url = "https://api.github.com/user"
     response = requests.get(url, auth=(username, password))
     if response.status_code == 200:
-         r = response.json()
+        r = response.json()
         print(r.get("id"))
     else:
         print(None)

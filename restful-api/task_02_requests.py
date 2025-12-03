@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+i#!/usr/bin/python3
 """this is docstr"""
 import requests
 import csv
@@ -15,17 +15,15 @@ def fetch_and_save_posts():
     url = "https://jsonplaceholder.typicode.com/posts"
     response = requests.get(url)
     if response.status_code == 200:
-       d = response.json()
-       for i in d:
-           dict  = {
-                   "id": i.get("id")
-                   "title":i.get("title")
-                   "body":i.get("body")
+        data = response.json()
+        with open("posts.csv", "w", encoding="utf-8", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=["id", "title", "body"])
+            writer.writeheader()
+            for i in data:
+                row = {
+                    "id": i.get("id"),
+                    "title": i.get("title"),
+                    "body": i.get("body"),
                 }
-
-    with open("posts.csv", "w", encoding ="utf-8") as f:
-            reader = csv.DictWriter(f, field = ["id","title","body"])
-            reader.writeheader()
-            
-
+                writer.writerow(row)
 

@@ -4,15 +4,18 @@ import os
 
 def generate_invitations(template, attendees):
     if type(template) != str:
-        raise TypeError("Invalid input types")
+        print("Invalid input types")
+    return
 
     if not isinstance(attendees, list):
-        raise TypeError("Invalid input types")
-    else:
+        print("Invalid input types")
+    return
+
+        else:
         for attendee in attendees:
             if not isinstance(attendee, dict):
-                raise TypeError("Invalid input types")
-
+                print("Invalid input types")
+            return
     if not template:
         print("Template is empty, no output files generated.")
         return

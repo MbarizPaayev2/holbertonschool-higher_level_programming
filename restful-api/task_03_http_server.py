@@ -24,7 +24,7 @@ class API(BaseHTTPRequestHandler):
             self.wfile.write(datav1.encode("utf-8"))
 
         elif self.path == "/info":
-I            datam1 = {"version": "1.0", "description": "A simple API built with http.server"}
+            datam1 = {"version": "1.0", "description": "A simple API built with http.server"}
             datamv1 = json.dumps(datam1)
  	    self.send_response(200)
             self.send_header('Content-Type', 'application/json')

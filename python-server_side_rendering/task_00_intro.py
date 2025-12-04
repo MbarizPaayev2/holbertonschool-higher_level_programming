@@ -5,17 +5,17 @@ import os
 def generate_invitations(template, attendees):
     if type(template) != str:
         print("Invalid input types")
-    return
+        return
 
     if not isinstance(attendees, list):
         print("Invalid input types")
-    return
+        return
 
-        else:
-        for attendee in attendees:
-            if not isinstance(attendee, dict):
-                print("Invalid input types")
+    for attendee in attendees:
+        if not isinstance(attendee, dict):
+            print("Invalid input types")
             return
+
     if not template:
         print("Template is empty, no output files generated.")
         return
@@ -25,7 +25,7 @@ def generate_invitations(template, attendees):
         return
 
     for index, attendee in enumerate(attendees, start=1):
-        text = template  # template-in kopyası
+        output_text = template
 
         for key in ["name", "event_title", "event_date", "event_location"]:
             value = attendee.get(key)
@@ -33,13 +33,13 @@ def generate_invitations(template, attendees):
             if value is None:
                 value = "N/A"
 
-            text = text.replace(f"{{{key}}}", str(value))
+            output_text = output_text.replace(f"{{{key}}}", str(value))
 
         output_filename = f"output_{index}.txt"
 
         try:
             with open(output_filename, "w", encoding="utf-8") as file:
-                file.write(text)
-                print(f"Generated {output_filename}")
+                file.write(output_text)
+            print(f"Generated {output_filename}")
         except Exception as error:
             print(f"Error writing file {output_filename}: {error}")

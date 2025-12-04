@@ -35,9 +35,10 @@ class API(BaseHTTPRequestHandler):
  	    self.send_header('Content-Type', 'text/plain')
             self.end_headers()
             self.wfile.write(b"Endpoint not found")
-    def run(server_class = HTTPServer, handle_class = API):
+def run(server_class = HTTPServer, handle_class = API):
 	server = ("", 8080)
 	httpd = server_class(server_address, handler_class)
         httpd.serve_forever()
+
 if __name__ == "__main__":
 	run()

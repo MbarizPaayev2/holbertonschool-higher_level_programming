@@ -15,7 +15,7 @@ def items():
             with open(json_file, "r") as f:
                 file = json.load(f)
                 items = file.get('items.html', [])
-            except Exception as e :
+        except Exception as e :
                 print(f"Error reading JSON file: {e}")
     else:
         print(f"{json_file} not found.")

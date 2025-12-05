@@ -6,64 +6,69 @@ import csv
 app = Flask(__name__)
 
 
-def read_json(file_path):
+def read_json_file(file_path):
     try:
-        with open(file_path, "r", encoding="utf-8") as f:
-            data = json.load(f)
-            return data.get("products", [])
-    except Exception as e:
-        print(f"Error reading JSON: {e}")
+        with open(file_path, "r", encoding="utf-8") as json_file:
+            data = json.load(json_file)
+            return data.get("items", [])
+    except Exception as error:
+        print(f"Error reading JSON: {error}")
         return []
 
 
-def read_csv(file_path):
-    data = []
+def read_csv_file(file_path):
+    products_list = []
+
     try:
-        with open(file_path, "r", encoding="utf-8") as f:
-            reader = csv.DictReader(f)
+        with open(file_path, "r", encoding="utf-8") as csv_file:
+            reader = csv.DictReader(csv_file)
             for row in reader:
                 row["id"] = int(row["id"])
                 row["price"] = float(row["price"])
-                data.append(row)
-    except Exception as e:
-        print(f"Error reading CSV: {e}")
+                products_list.append(row)
+    except Exception as error:
+        print(f"Error reading CSV: {error}")
 
-    return data
+    return products_list
 
 
 @app.route("/products")
-def products():
-    source = request.args.get("source", "json").lower()
+def show_products():
+    source_type = request.args.get("source", "json").lower()
     product_id = request.args.get("id")
-    error = None
-    products_data = []
+    error_message = None
+    product_list = []
 
-    if source == "json":
-        products_data = read_json("products.json")
-    elif source == "csv":
-        products_data = read_csv("products.csv")
+    if source_type == "json":
+        product_list = read_json_file("products.json")
+    elif source_type == "csv":
+        product_list = read_csv_file("products.csv")
     else:
-        error = "Wrong source"
+        error_message = "Wrong source"
 
     if product_id:
         try:
             product_id = int(product_id)
-            filtered = [p for p in products_data if p["id"] == product_id]
-            if not filtered:
-                error = "Product not found"
+            filtered_products = [
+                product for product in product_list
+                if product["id"] == product_id
+            ]
+
+            if not filtered_products:
+                error_message = "Product not found"
             else:
-                products_data = filtered
+                product_list = filtered_products
+
         except ValueError:
-            error = "Invalid id"
+            error_message = "Invalid id"
 
     return render_template(
         "product_display.html",
-        products=products_data,
-        error=error,
-        source=source
+        products=product_list,
+        error=error_message,
+        source=source_type
     )
 
 
 if __name__ == "__main__":
     app.run(debug=True)
-
